@@ -2,7 +2,7 @@
 import { ReactNode } from 'react';
 
 interface LayoutProps {
-  children: ReactNode;  // This defines the type for the children prop
+  children: ReactNode;  // children prop must be typed as ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => {
@@ -10,11 +10,11 @@ const Layout = ({ children }: LayoutProps) => {
     <div>
       {/* Any layout-related elements */}
       <header>Header</header>
-      <main>{children}</main>
+      <main>{children}</main>  {/* Render children here */}
       <footer>Footer</footer>
     </div>
   );
 };
 
-export default Layout;
+export default Layout;  // Ensure default export
 
